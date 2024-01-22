@@ -1,5 +1,5 @@
 # Thermodynamic Analysis of Silk Fibroin-Graphite Hybrid Materials and Their Morphology
-## Authors: Marlo Zorman, Christian Phillips, Chenyang Shi, Shuai Zhang, James De Yoreo, Jim Pfaendtner
+Marlo Zorman, Christian Phillips, Chenyang Shi, Shuai Zhang, James De Yoreo, Jim Pfaendtner
 
 Files and scripts needed to replicate all biased and unbiased simulations and analyses in (insert DOI when possible).
 
