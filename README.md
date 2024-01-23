@@ -5,9 +5,9 @@ Silk Fibroin (SF) is a β-sheet rich protein that is responsible for the remarka
 
 ### Description
 Files and scripts needed to replicate all biased and unbiased simulations and analyses in (insert DOI when possible). Simulations were run with GROMACS and utilize PACKMOL to generate inputs and PLUMED to restrain coordinates. Analysis scripts require the NumPy, Pandas, Matplotlib, MDAnalysis, MDTraj, and Pymbar libraries.
-## sims
+#### sims
 Contains folder with PACKMOL input scripts and all PDB files of individual components, as well as representative gro input structures. Also contains folder with GROMACS mdp files and representative PLUMED dat files. 
-## Files
+#### Files
 Scripts required to reproduce all analysis performed in both the manuscript and supplemental information. Additionally includes a script used to generate free energy diagrams with MBAR.
 
 ### Dependancies
