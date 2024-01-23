@@ -1,0 +1,23 @@
+MOLINFO STRUCTURE=0_em.pdb
+
+# Get COM points from protein
+com1: COM ATOMS=160,378,444,662,728,946,1012,1230,1296
+com2: COM ATOMS=236,302,520,586,804,870,1088,1154,1372
+
+# Calculate vectors
+v21: DISTANCE ATOMS=55140,55710 COMPONENTS
+v34: DISTANCE ATOMS=com1,com2 COMPONENTS
+
+# Calculate angle in xy plane between vectors
+a: CUSTOM ...
+        ARG=v21.x,v21.y,v34.x,v34.y
+        VAR=x21,y21,x34,y34
+        FUNC=acos((x21*x34+y21*y34)/sqrt((x21*x21+y21*y21)*(x34*x34+y34*y34)))
+        PERIODIC=NO
+..
+
+# Restrain angle.
+bb: RESTRAINT ARG=a KAPPA=100000.0 AT=0.7853981633974483
+
+# Print results
+PRINT ARG=a,bb.bias FILE=colvar_0 STRIDE=250
