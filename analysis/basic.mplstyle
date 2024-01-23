@@ -1,0 +1,14 @@
+font.family : sans
+font.serif : DejaVu sans
+font.size : 12 
+legend.fontsize : 10
+xtick.direction : in
+ytick.direction : in
+xtick.top : False
+ytick.right : False
+xtick.minor.visible : True
+ytick.minor.visible : True
+xtick.major.size : 5.0
+xtick.minor.size : 3.0
+ytick.major.size : 5.0
+ytick.minor.size : 3.0
