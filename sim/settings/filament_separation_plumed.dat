@@ -1,0 +1,13 @@
+MOLINFO STRUCTURE=protein_0_em.pdb
+WHOLEMOLECULES ENTITY0=1-3130 ENTITY1=3131-6260
+
+prot1: GROUP NDX_FILE=index.ndx NDX_GROUP=Protein-AC
+prot2: GROUP NDX_FILE=index.ndx NDX_GROUP=Surface-AC
+
+protein: COM ATOMS=prot1
+surface: COM ATOMS=prot2
+
+d: DISTANCE ATOMS=protein,surface COMPONENTS
+bb: RESTRAINT ARG=d.x KAPPA=22500 AT=4.95
+
+PRINT ARG=d.x,bb.bias FILE=colvar_multi_0 STRIDE=500
